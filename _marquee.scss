@@ -1,3 +1,10 @@
+// https://codepen.io/fcalderan/pen/GRJeYOL
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
 .marquee {
   display: flex;
   align-items: center;
@@ -5,34 +12,39 @@
   background-color: var(--red);
   height: 38px;
   overflow: hidden;
+  color: var(--white);
+  font: 16px var(--accent-font);
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .marquee__fragment {
-  text-wrap: nowrap;
-  
   &::after {
     content: '•'
   }
 }
 
 .marquee__wrapper {  
-  --tw: 130vw;
-  --ad: 5s;
+  --tw: 104em;
+  --ad: 15s;
 
-  color: var(--white);
-  font-family: var(--accent-font);
-  text-transform: uppercase;
-  white-space: nowrap;
   width: var(--tw);
   text-shadow: var(--tw) 0 currentColor, 
                calc(var(--tw) * 2) 0 currentColor, 
                calc(var(--tw) * 3) 0 currentColor,
                calc(var(--tw) * 4) 0 currentColor;
-  will-change: transform;
+  //will-change: transform;
   animation: marquee var(--ad) linear infinite;
 }
 
-@keyframes marquee {
-   0% { transform: translateX(0); }
-   100% { transform: translateX(-100%); }
+@include breakpoint {
+
+  .marquee {
+    height: 60px;
+    font-size: 22px;
+  }
+  
+  .marquee__wrapper {
+    --tw: 2290px; /* 104em багует :( */
+  }
 }
