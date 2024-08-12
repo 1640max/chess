@@ -1,1 +1,19 @@
-@import "table"
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather:wght@400;700&display=swap');
+
+:root {
+  --white: #fff;
+  --red: #f54932;
+  --black: #313131;
+
+  --accent-font: "Merriweather", serif;
+}
+
+.body {
+  font-family: "Golos Text", sans-serif;
+  font-optical-sizing: auto;
+  margin: 0;
+}
+
+
+@import "marquee";
+@import "table";
