@@ -1,0 +1,39 @@
+.header {
+	
+}
+
+.header__logo {
+	height: 32px;
+}
+
+.header__heading {
+	
+}
+
+.header__tagline {
+	
+}
+
+.button {
+	
+}
+
+.header__button {
+	
+}
+
+.button_secondary {
+	
+}
+
+.header__button-secondary {
+	
+}
+
+@include breakpoint {
+
+  .header__logo {
+    height: 36px;
+  }
+
+}
