@@ -18,3 +18,10 @@
 	text-align: right;
 }
 
+@include breakpoint {
+
+  .h1 {
+    font-size: 60px;
+  }
+
+}
