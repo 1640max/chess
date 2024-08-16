@@ -44,9 +44,9 @@
   all: unset;
 }
 
-@import "header";
 @import "h1";
 @import "button";
+@import "header";
 @import "marquee";
-@import "welcome";
 @import "table";
+@import "welcome";
