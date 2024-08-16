@@ -1,8 +1,32 @@
 .welcome {
+  display: grid;
+  gap: 24px;
+  grid-template-areas:
+    "string-1"
+    "img-1"
+    "string-2"
+    "img-2"
+    "string-3"
+    "table";
+
+  @include breakpoint {
+    grid-template-columns: 5fr 3fr 4fr;
+    grid-template-areas:
+      "strings-1-2  strings-1-2  img-1"
+      "img-2        bottom       bottom";
+  }
 }
 
-.welcome__contents-container {
-	
+.welcome__self {
+  margin: 48px 0 0;
+  padding: 0 20px 0 19px;
+}
+
+.welcome__contents-wrapper {
+  grid-area: strings-1-2;
+	display: contents;
+
+  @include breakpoint { display: revert }
 }
 
 .welcome__text {
@@ -15,16 +39,29 @@
   color: var(--red);
 }
 
+.welcome__string-1 { grid-area: string-1 }
+.welcome__string-2 { grid-area: string-2 }
+.welcome__string-3 { grid-area: string-3 }
+
 .welcome__img-1 {
-	
+	grid-area: img-1;
+  width: 100%;
 }
 
 .welcome__img-2 {
-	
+	grid-area: img-2;
+  width: 100%;
+  margin-top: 10px;
+  transform: scale(1.07);
 }
 
-.welcome__bottom-container {
-	
+.welcome__table { grid-area: table }
+
+.welcome__bottom {
+  
+	@include breakpoint {
+    grid-area: bottom;
+  }
 }
 
 .welcome__link {
