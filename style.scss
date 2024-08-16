@@ -5,6 +5,7 @@
   --white: #fff;
   --red: #f54932;
   --text-color: #313131;
+  --link-color: #3057a2;
 
   --accent-font: "Merriweather", serif;
   --default-font: "Golos Text", sans-serif;
@@ -29,6 +30,10 @@
   @include breakpoint{ width: 1222px }
 }
 
+.link {
+  color: var(--link-color);
+  text-decoration: none;
+}
 
 @import "header";
 @import "h1";
