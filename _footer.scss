@@ -1,0 +1,10 @@
+.footer {
+	background-color: #e9ded4;
+  padding: 40px 0 60px;
+  @include breakpoint { padding-bottom: 72px }
+}
+
+.footer__body {
+	opacity: .6;
+  margin: 0;
+}
