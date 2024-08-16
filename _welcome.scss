@@ -58,7 +58,11 @@
   transform: scale(1.07);
 }
 
-.welcome__table { grid-area: table }
+.welcome__table {
+  grid-area: table;
+  margin: 44px 0 40px;
+  @include breakpoint { margin: 60px 0 48px }
+}
 
 .welcome__bottom {
 
