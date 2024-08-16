@@ -23,6 +23,12 @@
   margin: 0;
 }
 
+.container {
+  margin: 0 auto;
+  width: 336px;
+  @include breakpoint{ width: 1222px }
+}
+
 
 @import "header";
 @import "h1";

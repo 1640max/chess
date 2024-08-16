@@ -19,7 +19,6 @@
 
 .welcome__self {
   margin: 48px 0 0;
-  padding: 0 20px 0 19px;
 }
 
 .welcome__contents-wrapper {
@@ -32,6 +31,10 @@
 .welcome__text {
   font: 400 28px var(--accent-font);
   text-transform: uppercase;
+
+  @include breakpoint {
+    font-size: 36px;
+  }
 }
 
 .welcome__text_accent {
@@ -58,7 +61,7 @@
 .welcome__table { grid-area: table }
 
 .welcome__bottom {
-  
+
 	@include breakpoint {
     grid-area: bottom;
   }
