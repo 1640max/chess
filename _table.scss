@@ -1,46 +1,53 @@
 .table {
-  display: table;
+  --table-border: 2px solid #d0d0d0;
+
+	display: flex;
+  flex-direction: column;
   border-collapse: collapse;
-  width: 100%;
+  margin: 0;
+  font-size: 20px;
+  line-height: 36px;
 }
 
 .table__row {
-  display: table-row;
-}
-
-.table__term, 
-.table__description {
-  display: table-cell;
-  padding: 10px;
-  border: 1px solid #ccc;
+  border-bottom: var(--table-border);
+  padding: 12px 0;
 }
 
 .table__term {
-  border-left: none;
-}
-
-.table__term::after {
-  content: ':'
+	display: inline-block;
+  &::after { content: ':'; }
 }
 
 .table__description {
+  display: inline-block;
   font-weight: bold;
-  border-right: none;
+  margin: 0
 }
 
-/* Убираем внешние границы */
-.table__row:first-child .table__term,
-.table__row:first-child .table__description {
-  border-top: none;
-}
+@include breakpoint {
 
-.table__row:last-child .table__term,
-.table__row:last-child .table__description {
-  border-bottom: none;
-}
+  .table {
+    display: table;
+    width: 100%;
+  }
 
-/* Стиль для зачеркнутого текста */
-.stroke {
-  text-decoration: line-through;
-  text-decoration-color: red;
+  .table__row {
+    display: table-row;
+    padding: 0;
+  
+    /* Убираем лишнюю границу */
+    &:last-child { border-bottom: none }
+  }
+
+  .table__term {
+    display: table-cell;
+    border-right: var(--table-border);
+    padding: 12px 12px 12px 0;
+  }
+
+  .table__description {
+    display: table-cell;
+    padding: 12px;
+  }
 }
