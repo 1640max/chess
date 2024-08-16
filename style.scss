@@ -4,7 +4,7 @@
 :root {
   --white: #fff;
   --red: #f54932;
-  --black: #313131;
+  --text-color: #313131;
 
   --accent-font: "Merriweather", serif;
   --default-font: "Golos Text", sans-serif;
@@ -19,6 +19,7 @@
 .body {
   font: 16px var(--default-font);
   font-optical-sizing: auto;
+  color: var(--text-color);
   margin: 0;
 }
 
@@ -27,4 +28,5 @@
 @import "h1";
 @import "button";
 @import "marquee";
+@import "welcome";
 @import "table";
