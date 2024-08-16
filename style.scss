@@ -30,9 +30,18 @@
   @include breakpoint{ width: 1222px }
 }
 
+.stroke {
+  text-decoration: line-through;
+  text-decoration-color: red;
+}
+
 .link {
   color: var(--link-color);
   text-decoration: none;
+}
+
+.reset {
+  all: unset;
 }
 
 @import "header";
