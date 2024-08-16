@@ -1,0 +1,10 @@
+.h2 {
+  font: 400 36px/110% var(--accent-font);
+  text-transform: uppercase;
+
+  @include breakpoint {
+    font-size: 54px;
+    line-height: 120%;
+    max-width: 806px;
+  }
+}
