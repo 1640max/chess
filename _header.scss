@@ -1,6 +1,14 @@
 .header {
 	padding: 18px 20px 0 19px;
   height: calc(812px - 38px);
+
+  background:
+    no-repeat left calc(79% - 73px) bottom -22px/100px url("header/knight.png"),
+    url('header/texture.jpg'),
+    no-repeat left 79% bottom -12px / 900px url("header/city.webp"),
+    fixed no-repeat calc(79% - 37px) 410px/309px url("header/circle.png"),
+    #e9ded4;
+  background-blend-mode: normal, color-burn, normal, normal, normal;   
 }
 
 .header__content {
