@@ -41,6 +41,15 @@
   .header {
     padding: 26px 0 0 72px;
     height: 700px;
+
+    background:
+      no-repeat calc(46% + 650px) 97% url("header/pawn.png"),
+      no-repeat calc(46% + 294px) 111% url("header/knight.png"),
+      url("header/texture.jpg"),
+      no-repeat left 46% bottom -25px url("header/city-desktop.webp"),
+      fixed no-repeat calc(46% + 347px) -5% url("header/circle.png"),
+      #e9ded4;
+    background-blend-mode: normal, normal, color-burn, normal, normal, normal;
   }
 
   .header__logo {
