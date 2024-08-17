@@ -23,8 +23,8 @@
 }
 
 .header__buttons {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-auto-rows: 47px;
   gap: 14px 16px;
 }
 
@@ -46,7 +46,8 @@
   }
 
   .header__buttons {
-    flex-direction: row;
+    grid-auto-flow: column;
+    grid-auto-rows: 72px;
   }
 
 }
